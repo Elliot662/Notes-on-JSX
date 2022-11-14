@@ -1,0 +1,7 @@
+.one{
+    display: flex;
+    flex-direction: row;
+}
+.two{
+    border: dashed black 1px;
+}
