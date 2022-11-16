@@ -12,10 +12,11 @@ import Goal from './ifconditional/App'
 import TermaryApp from "./termary/App"
 import ShortApp from './shortCircuit/App'
 import AppForm from './NameInput/App'
+import StyledAppForm from './styled/App'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <AppForm />
+    <StyledAppForm />
   </React.StrictMode>
 );
