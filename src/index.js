@@ -13,10 +13,12 @@ import TermaryApp from "./termary/App"
 import ShortApp from './shortCircuit/App'
 import AppForm from './NameInput/App'
 import StyledAppForm from './styled/App'
+import Lifecycle from './ReactLifecycle/Lifecycle'
+import App5 from './API/App'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <StyledAppForm />
+    <App5 />
   </React.StrictMode>
 );
