@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react"
-const App5 = () => {
+const App6 = () => {
     const [data, setData] = useState("")
     const [error, setError] = useState(null)
 
     const getter = async () => {
         try {
-            let response = await fetch("https://api.adviceslip.com/advice")
+            let response = await fetch("https://ghibliapi.herokuapp.com/films/58611129-2dbc-4a81-a72f-77ddfc1b1b49")
             if (!response.ok) {
                 throw new Error(response.statusText)
             }
@@ -28,10 +28,10 @@ const App5 = () => {
     }
     return (
         <div>
-            <h1>Hey there, here's is some advice</h1>
-            <h2>{data.slip.advice}</h2>
-            <button onClick={getter}>more advice here</button>
+            <h1>Studio-Ghibli</h1>
+            <h2>{data.title}</h2>
+            <h2>{data.description}</h2>
         </div>
     )
 }
-export default App5
+export default App6

@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react"
-const App5 = () => {
+const App9 = () => {
     const [data, setData] = useState("")
     const [error, setError] = useState(null)
 
     const getter = async () => {
         try {
-            let response = await fetch("https://api.adviceslip.com/advice")
+            let response = await fetch("https://animechan.vercel.app/api/random")
             if (!response.ok) {
                 throw new Error(response.statusText)
             }
@@ -28,10 +28,11 @@ const App5 = () => {
     }
     return (
         <div>
-            <h1>Hey there, here's is some advice</h1>
-            <h2>{data.slip.advice}</h2>
-            <button onClick={getter}>more advice here</button>
+            <h1>Some quotes from some great shows</h1>
+            <h2>{data.quote}</h2>
+            <h2>-{data.character} from {data.anime}</h2>
+            <button onClick={getter}>Click here for another great quote</button>
         </div>
     )
 }
-export default App5
+export default App9
