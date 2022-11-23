@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react"
+import Quote from "./Anime_quote"
+import "./styles.css"
 const App9 = () => {
     const [data, setData] = useState("")
     const [error, setError] = useState(null)
@@ -21,17 +23,14 @@ const App9 = () => {
         getter()
     }, [])
     if (!data) {
-        return <h1>loading...</h1>
+        return <h1>loading please wait...</h1>
     }
     if (error) {
-        return <h1>Their has been an error sorry</h1>
+        return <h1>Their has been an error, please refresh the page</h1>
     }
     return (
         <div>
-            <h1>Some quotes from some great shows</h1>
-            <h2>{data.quote}</h2>
-            <h2>-{data.character} from {data.anime}</h2>
-            <button onClick={getter}>Click here for another great quote</button>
+            <Quote data={data} getter={getter}/>
         </div>
     )
 }

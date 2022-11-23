@@ -1,0 +1,21 @@
+*{
+    background-color:  #FECD45;
+}
+.theText{
+    margin: 25px;
+    color: #2568FB;
+}
+#character{
+    text-align: right;
+}
+#quoteButton{
+    position: absolute;
+    left: 40%;
+    color: #2568FB;
+}
+#quoteButton:hover{
+    color: purple;
+}
+#theQuote{
+    text-align: justify;
+}
